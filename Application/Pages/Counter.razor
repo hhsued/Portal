@@ -1,0 +1,31 @@
+﻿@page "/counter"
+@using MudBlazor
+<MudDrawer
+	@bind-Open="@open"
+	Anchor="MudBlazor.Anchor.Start"
+	Elevation="1"
+	Variant="DrawerVariant.Mini"
+	OpenMiniOnHover="true">
+	<MudNavMenu>
+		<MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Filled.Store">Store</MudNavLink>
+	</MudNavMenu>
+</MudDrawer>
+<MudDrawer @bind-Open="@openR" Anchor="MudBlazor.Anchor.End" Elevation="1" Variant="@DrawerVariant.Temporary">
+	<MudDrawerHeader>
+		<MudText Typo="Typo.h6">My App</MudText>
+	</MudDrawerHeader>
+	<MudNavMenu>
+		<MudNavLink Match="NavLinkMatch.All">Store</MudNavLink>
+		<MudNavLink Match="NavLinkMatch.All">Library</MudNavLink>
+		<MudNavLink Match="NavLinkMatch.All">Community</MudNavLink>
+	</MudNavMenu>
+</MudDrawer>
+
+@code {
+	bool open = false;
+	bool openR = false;
+	void OpenDrawer()
+	{
+		open = true;
+	}
+}

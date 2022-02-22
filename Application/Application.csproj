@@ -1,0 +1,75 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+	
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net6.0</TargetFramework>
+		<ApplicationIcon>favicon.ico</ApplicationIcon>
+	</PropertyGroup>
+	
+	<ItemGroup>
+	  <Compile Remove="Api\Google.cs" />
+	  <Compile Remove="Api\ReleaseNotes.cs" />
+	  <Compile Remove="Api\Sql.cs" />
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <Content Remove="Translation\De_DE.json" />
+	  <Content Remove="Api\JobData\1.json" />
+	  <Content Remove="Api\JobData\2.json" />
+	  <Content Remove="Api\JobData\3.json" />
+	  <Content Remove="Api\Token.json" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<PackageReference Include="AntDesign" Version="0.10.3.1" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="6.0.0" />
+		<PackageReference Include="MudBlazor" Version="6.0.6" />
+		<PackageReference Include="MudBlazor.Markdown" Version="0.0.8" />
+		<PackageReference Include="MudBlazor.ThemeManager" Version="1.0.6" />
+		<PackageReference Include="MySql.Data" Version="8.0.28" />
+		<PackageReference Include="SqlKata" Version="2.3.7" />
+		<PackageReference Include="SqlKata.Execution" Version="2.3.7" />
+		<PackageReference Include="System.Data.SQLite.Core" Version="1.0.115.5" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<ProjectReference Include="..\Photino.Blazor\Photino.Blazor.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Update="wwwroot\**">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="favicon.ico">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Api\Helper\" />
+	  <Folder Include="Api\Models\QueryBuilder\" />
+	  <Folder Include="Data\Db\" />
+	  <Folder Include="Data\Files\" />
+	  <Folder Include="Pages\Full\" />
+	  <Folder Include="Pages\DirectLAccess\" />
+	  <Folder Include="Shared\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="Api\Index.cs" />
+	  <None Include="Translation\de_DE\Api\De_DE.json" />
+	  <None Include="Api\Google.cs" />
+	  <None Include="Api\Jobs.cs" />
+	  <None Include="Api\JobData\1.json" />
+	  <None Include="Api\JobData\2.json" />
+	  <None Include="Api\JobData\3.json" />
+	  <None Include="Api\ReleaseNotes.cs" />
+	  <None Include="Api\Token.json" />
+	</ItemGroup>
+
+</Project>

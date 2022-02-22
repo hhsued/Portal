@@ -1,0 +1,44 @@
+﻿@inherits LayoutComponentBase
+
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+<RadzenDialog/>
+<RadzenNotification/>
+<RadzenContextMenu/>
+<RadzenTooltip/>
+
+<MudLayout>
+	<MudAppBar Fixed="true" Dense="true">
+		<MudTooltip Text="Hier kommt das Logo hin">
+			<MudIconButton Icon="@Icons.Custom.Brands.WhatsApp" Link="Dashboard" />
+		</MudTooltip>
+		<MudTooltip Text="Gemeindebrief">
+			<MudIconButton Icon="@Icons.Filled.TextSnippet" Link="counter" />
+		</MudTooltip>
+		<MudSpacer />
+		<MudIconButton Icon="@Icons.Filled.SpeakerNotes" />
+		<MudMenu Icon="@Icons.Material.Filled.MoreVert">
+			<MudMenuItem Link="/Gemeindebrief">Einstellungen</MudMenuItem>
+			<MudMenuItem Link="/Gemeindebrief">Benutzerkonto</MudMenuItem>
+			<MudDivider />
+			<MudMenuItem Link="/Gemeindebrief">Über</MudMenuItem>
+			<MudDivider />
+			<MudMenuItem Link="/Gemeindebrief">Hilfe</MudMenuItem>
+			<MudDivider />
+			<MudMenuItem Link="/Gemeindebrief">Abmelden</MudMenuItem>
+		</MudMenu>
+	</MudAppBar>
+
+	<MudMainContent>
+		<MudContainer MaxWidth="MaxWidth.False" Class="mt-4">
+			@Body
+		</MudContainer>
+	</MudMainContent>
+</MudLayout>
+@code {
+	protected override void OnInitialized()
+	{
+		base.OnInitialized();
+	}
+}

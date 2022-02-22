@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32104.313
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Photino.Blazor", "Photino.Blazor\Photino.Blazor.csproj", "{446CE57D-DA5A-45CE-8FC2-D23821AC39DC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3CF0D9AA-E982-4D0D-8A6D-90D42B74E6CE}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		azure-pipelines-photino.blazor-dev.yml = azure-pipelines-photino.blazor-dev.yml
+		azure-pipelines-photino.blazor-prod.yml = azure-pipelines-photino.blazor-prod.yml
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{7C8371BF-E92B-437F-916E-53C0DADC2C54}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portal_alt", "..\Portal_alt\Fehlerhaft\Portal\Portal_alt.csproj", "{7D73D61E-D987-41D4-B08F-697A81C938B5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Starter", "..\Portal_alt\Starter\Starter.csproj", "{60118432-D95D-48A0-B997-BF98429B0D92}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "portal", "..\..\..\..\..\..\xampp\htdocs\portal\", "{D4610CA8-1415-483E-8BDD-5B3B04E85DAF}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_59423"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\xampp\htdocs\portal\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_59423\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_59423"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\xampp\htdocs\portal\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_59423\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "59423"
+		SlnRelativePath = "..\..\..\..\..\..\xampp\htdocs\portal\"
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Attributes", "..\..\Attributes\Attributes.csproj", "{FB8D733A-51C2-4B81-B7D3-26022F3EFEF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{446CE57D-DA5A-45CE-8FC2-D23821AC39DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{446CE57D-DA5A-45CE-8FC2-D23821AC39DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{446CE57D-DA5A-45CE-8FC2-D23821AC39DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{446CE57D-DA5A-45CE-8FC2-D23821AC39DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C8371BF-E92B-437F-916E-53C0DADC2C54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C8371BF-E92B-437F-916E-53C0DADC2C54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C8371BF-E92B-437F-916E-53C0DADC2C54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C8371BF-E92B-437F-916E-53C0DADC2C54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D73D61E-D987-41D4-B08F-697A81C938B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D73D61E-D987-41D4-B08F-697A81C938B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D73D61E-D987-41D4-B08F-697A81C938B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D73D61E-D987-41D4-B08F-697A81C938B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60118432-D95D-48A0-B997-BF98429B0D92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60118432-D95D-48A0-B997-BF98429B0D92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60118432-D95D-48A0-B997-BF98429B0D92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60118432-D95D-48A0-B997-BF98429B0D92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4610CA8-1415-483E-8BDD-5B3B04E85DAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4610CA8-1415-483E-8BDD-5B3B04E85DAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4610CA8-1415-483E-8BDD-5B3B04E85DAF}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4610CA8-1415-483E-8BDD-5B3B04E85DAF}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{FB8D733A-51C2-4B81-B7D3-26022F3EFEF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB8D733A-51C2-4B81-B7D3-26022F3EFEF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB8D733A-51C2-4B81-B7D3-26022F3EFEF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB8D733A-51C2-4B81-B7D3-26022F3EFEF5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0639F843-32E3-4B90-BBB0-0F589AD82B9F}
+	EndGlobalSection
+EndGlobal

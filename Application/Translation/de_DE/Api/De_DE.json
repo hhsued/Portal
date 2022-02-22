@@ -1,0 +1,10 @@
+{
+    "no_acc_param":"Du darfst diese API nicht aufrufen! Bitte stelle Zugangsdaten für einen API-Aufruf zur Verfügung!",
+    "no_action":"Keine Aktion übermittelt. Beende den Aufruf!",
+    "not_logged_in":"Du bist nicht angemeldet! Melde Dich an, um einen Api-Aufruf durchzuführen",
+    "no_action_parameter":"Es wurden keine Parameter für die Aktion übermittelt!",
+    "directly_noQuery": "Für die Aktion 'direkt' (directly) musst Du eine Abfrage zur Verfügung stellen!",
+    "set_noDataAndTablename": "Um Daten mit der Setzen-Aktion (set-action) zu schreiben, müssen der Tabellenname sowie die zu schreibenden Daten bereitgestellt werden!",
+    "set_DataButNoTablename": "Daten für die Setzen-Aktion (set-action) wurden bereitgestellt, doch die Zieltabelle fehlt",
+    "set_TableButNoData": "Eine Tabelle für die Setzen-Aktion (set-action) wurde übermittelt, jedoch keine Daten!"
+}

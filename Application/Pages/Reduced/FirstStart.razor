@@ -1,0 +1,93 @@
+﻿@page "/firststart"
+@layout Application.Layouts.ReducedLayout
+
+<MudCard Outlined="false" 
+         Elevation="0">
+	<MudCardHeader>
+		<CardHeaderContent>
+			<MudText Typo="Typo.h5">Portal-App - Erster Start</MudText>
+		</CardHeaderContent>
+	</MudCardHeader>
+	<MudCardContent>
+		<MudExpansionPanels 
+			Dense="true">
+			<MudExpansionPanel Text="Herzlich willkommen"
+			                   Dense="true"
+												 IsExpanded="_panelsExpansion[0]"
+												 Disabled="!_panelsExpansion[0]">
+				<MudText Typo="Typo.body1">
+					Es scheint so, als wenn die App zum ersten Mal gestartet wird (oder es gibt Probleme mit der Konfigurationsdatei).
+				</MudText>
+				<MudText Typo="Typo.body1">
+					In den folgenden Schritten wirst Du durch die Einrichtung für die App bzw. deren Wiederherstellung geführt.
+				</MudText>
+				<MudText Typo="Typo.body1">
+					Klicke einfach auf "Weiter", um zum nächsten Schritt zu gelangen.
+				</MudText>
+				<MudText Typo="Typo.body1">Hinweis: Alle im Folgenden gemachten Einstellungen können später im Programm noch geändert werden.</MudText>
+				<MudButton FullWidth="true"
+				           OnClick="() => { ExpandPanel(0, 1); }">
+					Weiter
+				</MudButton>
+			</MudExpansionPanel>
+			<MudExpansionPanel Text="Art der App"
+												 IsExpanded="_panelsExpansion[1]"
+												 Disabled="!_panelsExpansion[1]">
+				<MudText Typo="Typo.body1">
+					Von welcher Art soll die App sein?
+				</MudText>
+				<MudText Typo="Typo.body1">
+					Es gibt zwei Möglichkeiten.
+				</MudText>
+				<MudText Typo="Typo.body1">
+					Die App als <b>lokale Instanz</b> speichert ihre Daten in einer Datenbank auf dem lokalen Computer, ebenso die Dateien.
+				</MudText>
+				<MudText Typo="Typo.body1">
+					Wird als Art die <b>Instanz im Internet</b> gewählt, so wird auf Daten und Dateien über eine Api zugegriffen, welche über das Internet erreichbar ist.
+				</MudText>
+				<MudButton FullWidth="true" OnClick='() => { OnAppTypeSelected("localInstance"); }'>Lokale Instanz</MudButton>
+				<MudButton FullWidth="true" OnClick='() => { OnAppTypeSelected("onlineInstance"); }'>Internet-Instanz</MudButton>
+				<MudButton FullWidth="true" OnClick='() => { OnAppTypeSelected("restoreConfigFile"); }'>Aus Datei wiederherstellen</MudButton>
+			</MudExpansionPanel>
+			<MudExpansionPanel Text="Lokale Instanz" 
+			                   IsExpanded="_panelsExpansion[2]"
+			                   Disabled="!_panelsExpansion[2]">
+				<MudText Typo="Typo.body1">Für die lokale Instanz sind keine weiteren Einstellungen von Nöten. Klicke einfach auf "Weiter", damit die Erstellung beginnen kann.</MudText>
+				<MudButton FullWidth="true" OnClick="OnCreateLocalInstance">Lokale Instanz erstellen</MudButton>
+			</MudExpansionPanel>
+			<MudExpansionPanel Text="Instanz im Internet"
+			                   IsExpanded="_panelsExpansion[3]"
+			                   Disabled="!_panelsExpansion[3]">
+				<MudTextField @bind-Value="_onlineInstance" 
+				              Label="Adresse der Internet-Instanz" 
+				              Variant="Variant.Text"/>
+			</MudExpansionPanel>
+			<MudExpansionPanel Text="Wiederherstellung"
+			                   IsExpanded="_panelsExpansion[4]"
+			                   Disabled="!_panelsExpansion[4]">
+				<InputFile id="fileInput" OnChange="OnUploadConfigFile" hidden multiple />
+				<MudButton HtmlTag="label"
+				           Variant="Variant.Filled"
+				           Color="MudBlazor.Color.Primary"
+				           StartIcon="@Icons.Filled.CloudUpload"
+				           for="fileInput">
+					Upload Files
+				</MudButton>
+			</MudExpansionPanel>
+			<MudExpansionPanel Text="Abschluss" 
+			                   IsExpanded="_panelsExpansion[5]"
+			                   Disabled="!_panelsExpansion[5]">
+			</MudExpansionPanel>
+		</MudExpansionPanels>
+	</MudCardContent>
+</MudCard>
+
+
+@code {
+
+	protected override void OnInitialized()
+	{
+		base.OnInitialized();
+	}
+
+}
